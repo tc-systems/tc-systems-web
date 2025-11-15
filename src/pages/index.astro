@@ -1,0 +1,67 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Card from '../components/Card.astro';
+import '../styles/global.css';
+---
+
+<Layout 
+  title="Taming Chaos Systems - Platform Engineering for Modern Infrastructure"
+  description="Platform Engineering consultancy specializing in Dev, AI, Blockchain, and Internal Systems. Building scalable foundations that enable teams to move fast."
+>
+  <Header />
+  
+  <main class="min-h-screen">
+    <section class="max-w-6xl mx-auto px-4 py-24 text-center">
+      <h1 class="text-5xl md:text-6xl font-bold text-slate-100 mb-6">
+        Platform Engineering for Modern Infrastructure
+      </h1>
+      <p class="text-xl md:text-2xl text-slate-400 mb-8 max-w-3xl mx-auto">
+        Building scalable platforms across Dev, AI, Blockchain, and Internal Systems
+      </p>
+      <a 
+        href="/contact" 
+        class="inline-block bg-cyan-500 hover:bg-cyan-600 text-white font-semibold px-8 py-3 rounded-lg transition-colors"
+      >
+        Get in Touch
+      </a>
+    </section>
+    
+    <section class="max-w-6xl mx-auto px-4 py-16">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <Card title="Platform Engineering">
+          <p class="text-slate-400">
+            Creating robust foundations that enable teams to build and deploy with confidence
+          </p>
+        </Card>
+        
+        <Card title="Technical Expertise">
+          <p class="text-slate-400">
+            25+ years of software engineering and architecture experience across traditional and emerging technologies
+          </p>
+        </Card>
+        
+        <Card title="Practical Solutions">
+          <p class="text-slate-400">
+            From blockchain infrastructure to AI platforms - we tame complexity through proven platform engineering practices
+          </p>
+        </Card>
+      </div>
+    </section>
+    
+    <section class="max-w-4xl mx-auto px-4 py-16 text-center">
+      <h2 class="text-3xl font-bold text-slate-100 mb-6">
+        Ready to tame your chaos?
+      </h2>
+      <a 
+        href="/contact" 
+        class="inline-block bg-cyan-500 hover:bg-cyan-600 text-white font-semibold px-8 py-3 rounded-lg transition-colors"
+      >
+        Contact Us
+      </a>
+    </section>
+  </main>
+  
+  <Footer />
+</Layout>

@@ -1,0 +1,13 @@
+---
+interface Props {
+  variant?: 'dark' | 'light';
+  wordmark?: boolean;
+}
+
+const { variant = 'dark', wordmark = false } = Astro.props;
+const logoSrc = wordmark 
+  ? `/logo-wordmark-${variant}.svg`
+  : `/logo-${variant}.svg`;
+---
+
+<img src={logoSrc} alt="Taming Chaos Systems" class="h-8" />

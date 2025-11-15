@@ -1,0 +1,55 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  image?: string;
+}
+
+const { title, description, image = '/favicon.svg' } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href={canonicalURL} />
+    <meta name="generator" content={Astro.generator} />
+    
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL(image, Astro.site)} />
+    
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonicalURL} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={new URL(image, Astro.site)} />
+    
+    <script type="application/ld+json">
+      {JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Taming Chaos Systems Ltd",
+        "url": "https://tc.systems",
+        "logo": "https://tc.systems/logo-dark.svg",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "contact@tc.systems",
+          "contactType": "customer service"
+        },
+        "description": "Platform Engineering consultancy specializing in Dev, AI, Blockchain, and Internal Systems"
+      })}
+    </script>
+  </head>
+  <body class="bg-dark-bg text-slate-200 antialiased">
+    <slot />
+  </body>
+</html>

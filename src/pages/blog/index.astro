@@ -1,0 +1,72 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import '../../styles/global.css';
+
+// Uncomment when blog posts are added:
+// import { getCollection } from 'astro:content';
+// const posts = await getCollection('blog');
+// posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+---
+
+<Layout 
+  title="Blog - Taming Chaos Systems"
+  description="Insights and technical writing on platform engineering, infrastructure, and taming complexity."
+>
+  <Header />
+  
+  <main class="min-h-screen">
+    <section class="max-w-4xl mx-auto px-4 py-16">
+      <h1 class="text-4xl md:text-5xl font-bold text-slate-100 mb-4">
+        Insights & Technical Writing
+      </h1>
+      <p class="text-xl text-slate-400 mb-12">
+        Thoughts on platform engineering, infrastructure, and taming complexity
+      </p>
+      
+      <div class="bg-dark-card border border-slate-800 rounded-lg p-12 text-center">
+        <p class="text-slate-300 mb-4">
+          Articles coming soon
+        </p>
+        <a 
+          href="#" 
+          class="text-cyan-400 hover:text-cyan-300"
+        >
+          Follow us on LinkedIn for updates
+        </a>
+      </div>
+      
+      <!-- 
+      Template for blog posts when added:
+      
+      <div class="space-y-8">
+        {posts.map((post) => (
+          <article class="bg-dark-card border border-slate-800 rounded-lg p-6 hover:border-cyan-400/50 transition-all">
+            <a href={`/blog/${post.slug}`}>
+              <h2 class="text-2xl font-semibold text-slate-100 mb-2 hover:text-cyan-400">
+                {post.data.title}
+              </h2>
+              <p class="text-slate-400 mb-4">{post.data.description}</p>
+              <time class="text-sm text-slate-500">
+                {post.data.pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+              </time>
+              {post.data.tags && (
+                <div class="mt-4 flex gap-2">
+                  {post.data.tags.map((tag) => (
+                    <span class="text-xs bg-dark-bg text-cyan-400 px-2 py-1 rounded">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              )}
+            </a>
+          </article>
+        ))}
+      </div>
+      -->
+    </section>
+  </main>
+  
+  <Footer />
+</Layout>

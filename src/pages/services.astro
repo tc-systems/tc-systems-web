@@ -1,0 +1,78 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Card from '../components/Card.astro';
+import '../styles/global.css';
+---
+
+<Layout 
+  title="Platform Engineering Services - Taming Chaos Systems"
+  description="Specialized platform engineering expertise across Dev, AI, Blockchain, and Internal Systems infrastructure."
+>
+  <Header />
+  
+  <main class="min-h-screen">
+    <section class="max-w-6xl mx-auto px-4 py-16">
+      <h1 class="text-4xl md:text-5xl font-bold text-slate-100 mb-4">
+        Platform Engineering Services
+      </h1>
+      <p class="text-xl text-slate-400 mb-12">
+        Specialized expertise across modern technology stacks
+      </p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <Card 
+          title="Platform Engineering" 
+          class="border-2 border-cyan-500/50"
+        >
+          <ul class="space-y-2 text-slate-400">
+            <li>→ Core infrastructure & developer tooling</li>
+            <li>→ CI/CD pipelines & automation</li>
+            <li>→ Observability & monitoring</li>
+            <li>→ Internal developer platforms</li>
+          </ul>
+        </Card>
+        
+        <Card title="Traditional Development">
+          <ul class="space-y-2 text-slate-400">
+            <li>→ Software architecture & design</li>
+            <li>→ Backend systems & APIs</li>
+            <li>→ Legacy system modernization</li>
+            <li>→ Technical leadership</li>
+          </ul>
+        </Card>
+        
+        <Card title="AI Platform Engineering">
+          <ul class="space-y-2 text-slate-400">
+            <li>→ AI infrastructure & deployment</li>
+            <li>→ Model orchestration & MLOps</li>
+            <li>→ Multi-agent systems</li>
+            <li>→ AI development workflows</li>
+          </ul>
+        </Card>
+        
+        <Card title="Blockchain Infrastructure">
+          <ul class="space-y-2 text-slate-400">
+            <li>→ Ethereum execution clients (cdk-erigon contributor)</li>
+            <li>→ Node infrastructure & operations</li>
+            <li>→ Blockchain platform development</li>
+            <li>→ Web3 architecture</li>
+          </ul>
+        </Card>
+      </div>
+      
+      <div class="mt-12 text-center">
+        <p class="text-slate-400 mb-4">Interested in working together?</p>
+        <a 
+          href="mailto:contact@tc.systems" 
+          class="text-cyan-400 hover:text-cyan-300 font-semibold"
+        >
+          contact@tc.systems
+        </a>
+      </div>
+    </section>
+  </main>
+  
+  <Footer />
+</Layout>

@@ -1,0 +1,72 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Card from '../components/Card.astro';
+import '../styles/global.css';
+---
+
+<Layout 
+  title="About Taming Chaos Systems - Platform Engineering Consultancy"
+  description="Over 25 years of software engineering experience building platforms across traditional finance, blockchain, and modern infrastructure."
+>
+  <Header />
+  
+  <main class="min-h-screen">
+    <section class="max-w-4xl mx-auto px-4 py-16">
+      <h1 class="text-4xl md:text-5xl font-bold text-slate-100 mb-12">
+        About Taming Chaos Systems
+      </h1>
+      
+      <div class="space-y-12">
+        <div>
+          <h2 class="text-2xl font-semibold text-cyan-400 mb-4">Who We Are</h2>
+          <p class="text-slate-300 leading-relaxed">
+            Taming Chaos Systems is a platform engineering consultancy focused on building the foundations that enable modern software teams to move fast without breaking things.
+          </p>
+        </div>
+        
+        <div>
+          <h2 class="text-2xl font-semibold text-cyan-400 mb-4">Experience</h2>
+          <p class="text-slate-300 leading-relaxed">
+            With over 25 years of software engineering and architecture experience, we bring deep technical expertise across traditional finance, emerging blockchain technologies, and modern platform engineering practices.
+          </p>
+        </div>
+        
+        <div>
+          <h2 class="text-2xl font-semibold text-cyan-400 mb-4">Current Work</h2>
+          <ul class="text-slate-300 space-y-2">
+            <li>→ Platform Engineering Manager at Insight Investments (asset management)</li>
+            <li>→ Contributing to cdk-erigon (Ethereum execution client development)</li>
+            <li>→ Consulting for Gateway.fm (blockchain infrastructure)</li>
+          </ul>
+        </div>
+        
+        <div>
+          <h2 class="text-2xl font-semibold text-cyan-400 mb-4">Approach</h2>
+          <p class="text-slate-300 leading-relaxed">
+            We believe in practical, proven solutions. Platform engineering isn't about following trends—it's about creating reliable, scalable infrastructure that makes developers' lives easier and businesses more resilient.
+          </p>
+        </div>
+        
+        <Card class="bg-dark-bg">
+          <h2 class="text-2xl font-semibold text-cyan-400 mb-4">Contact</h2>
+          <div class="text-slate-300 space-y-2">
+            <p>
+              <a href="mailto:contact@tc.systems" class="text-cyan-400 hover:text-cyan-300">
+                contact@tc.systems
+              </a>
+            </p>
+            <p>
+              <a href="#" class="text-cyan-400 hover:text-cyan-300">
+                LinkedIn
+              </a>
+            </p>
+          </div>
+        </Card>
+      </div>
+    </section>
+  </main>
+  
+  <Footer />
+</Layout>
